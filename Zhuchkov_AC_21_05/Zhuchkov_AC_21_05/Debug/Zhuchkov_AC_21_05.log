@@ -1,0 +1,5 @@
+﻿  Zhuchkov_AC_21_05.cpp
+C:\Users\lesha\Documents\GitHub\dz\Zhuchkov_AC_21_05\Zhuchkov_AC_21_05\Zhuchkov_AC_21_05.cpp(7,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\lesha\Documents\GitHub\dz\Zhuchkov_AC_21_05\Zhuchkov_AC_21_05\Zhuchkov_AC_21_05.cpp(22,8): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+C:\Users\lesha\Documents\GitHub\dz\Zhuchkov_AC_21_05\Zhuchkov_AC_21_05\Zhuchkov_AC_21_05.cpp(27,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+  Zhuchkov_AC_21_05.vcxproj -> C:\Users\lesha\Documents\GitHub\dz\Zhuchkov_AC_21_05\Debug\Zhuchkov_AC_21_05.exe
