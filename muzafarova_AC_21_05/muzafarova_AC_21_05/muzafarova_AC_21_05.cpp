@@ -1,22 +1,36 @@
-﻿#include <iostream>
+﻿#include "muzafarova_AC_21_05.h"
+#include <iostream>
+#include <string>
 using namespace std;
-unsigned int RSHash(const std::string& str)
-{
-    unsigned int b = 378551;
-    unsigned int a = 63689;
-    unsigned int hash = 0;
 
-    for (std::size_t i = 0; i < str.length(); i++)
-    {
-        hash = hash * a + str[i];
-        a = a * b;
-    }
 
-    return hash;
+bool isInt(string str) {
+	bool err = false;
+	for (int i = 0; i < str.length(); i++) {
+		/*cout « isdigit(str[i]) « " " « str[i] « "\n";*/
+		if (isdigit(str[i]) == 0) {
+			err = true;
+			break;
+		}
+	}
+	if (err)
+		return 0;
+	return 1;
 }
 
-int main() {
-    string x;
-    cin >> x;
-    cout << RSHash(x);
+int HF(string key) {
+	int a = std::stoi(key);
+	a *= a; // возвести ключ в квадрат
+	a >>= 11; // отбросить 11 младших бит
+	return a % 1024; // возвратить 10 младших бит
+}
+
+int metod_square(string key) {
+	if (!isInt(key)) {
+		setlocale(LC_ALL, "Rus");
+		cout << "Не целое число!";
+	}
+	else {
+		return HF(key);
+	}
 }
