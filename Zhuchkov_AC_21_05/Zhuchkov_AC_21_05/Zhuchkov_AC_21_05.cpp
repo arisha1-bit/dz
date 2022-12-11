@@ -1,45 +1,31 @@
 ﻿#include <iostream>
+#include <string>
+
+#include "Zhuchkov_AC_21_05.h"
 
 using namespace std;
 
-bool isInt(string str) {
-	bool err = false;
-	for (int i = 0; i < str.length(); i++) {
-		/*cout « isdigit(str[i]) « " " « str[i] « "\n";*/
-		if (isdigit(str[i]) == 0) {
-			err = true;
-			break;
-		}
-	}
-	if (err)
-		return 0;
-	return 1;
-}
+long long PolinomHash(string str) {
+    
+//  P: значением P может быть любое простое число, примерно равное количеству различных используемых символов.
+//  Например : если входная строка содержит только строчные буквы английского алфавита, то P = 31 является подходящим значением P.
+//  Если входная строка содержит как прописные, так и строчные буквы, то подходящим вариантом является P = 53.
+//  M : вероятность столкновения двух случайных строк обратно пропорциональна m.Следовательно, m должно быть большим простым числом.
 
-int HashFunction(int k)
-{
-	int N = 1409200314092003; double A = 0.618033;
-	int h = N * fmod(k * A, 1);
-	return h;
-}
+    const int k = 53;
+    const int mod = 1e9 + 7;
 
-void main(int argc, char* argv[])
-{
-	setlocale(LC_ALL, "Rus");
-	if (argc == 1) {
-		cout << "Ошибка\nВведите значение!";
-		return;
-	}
-	for (int i = 1; i < argc; ++i) {
-		if (isInt(argv[i])) {
-			cout << "HashFunction(" << argv[i] << ")=" << HashFunction(atoi(argv[i])) << endl;
-			continue;
-		}
-		else
-		{
-			cout << argv[i] << " - Не целое число!" << endl;
-			continue;
-		}
-		cout << "HashFunction(" << argv[i] << ") - Не число!" << endl;
-	}
+    long long hash = 0;
+    long long m = 1;
+
+    for (char sim : str) {
+        int exp; 
+        exp = (int)(sim - 'a' + 1);
+
+        hash = (hash + m * exp) % mod;
+        
+        m = (m * k) % mod;
+    }
+
+    return hash;
 }
