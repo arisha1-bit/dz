@@ -1,1 +1,2 @@
-int HashRot13(const char* str)
+#include <string>
+int HashRot13(string a);
