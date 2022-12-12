@@ -19,7 +19,7 @@ bool isInt(string str) {
 }
 
 int HF(string key) {
-	int a = std::stoi(key);
+	long int a = std::stoi(key);
 	a *= a; // возвести ключ в квадрат
 	a >>= 11; // отбросить 11 младших бит
 	return a % 1024; // возвратить 10 младших бит
