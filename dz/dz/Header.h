@@ -1,5 +1,1 @@
-#pragma once
-#include <iostream>
-#include <string>
-using namespace std;
-string rot(string plaintext);
+int HashRot13(const char* str)
