@@ -1,2 +1,3 @@
 #include <string>
-int HashRot13(string a);
+string a;
+int HashRot13(a.c_str());
