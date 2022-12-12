@@ -27,7 +27,6 @@ int HF(string key) {
 
 int metod_square(string key) {
 	if (!isInt(key)) {
-		setlocale(LC_ALL, "Rus");
 		cout << "Не целое число!";
 	}
 	else {
