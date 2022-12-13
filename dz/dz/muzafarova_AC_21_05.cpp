@@ -1,5 +1,6 @@
 ﻿#include "muzafarova_AC_21_05.h"
 #include <iostream>
+#include <sstream>
 #include <string>
 using namespace std;
 
@@ -18,15 +19,21 @@ bool isInt(string str) {
 	return 1;
 }
 
-int HF(string key) {
-	int a = std::stoi(key);
-	a *= a; // возвести ключ в квадрат
-	a >>= 11; // отбросить 11 младших бит
-	return a % 1024; // возвратить 10 младших бит
+string HF(string key) {
+	long int a = std::stoi(key);
+	a *= a;
+	string a1, a2, a3, a4;
+	string stra = to_string(a);
+	a1 = stra[stra.length() / 2 - 2];
+	a2 = stra[stra.length() / 2 - 1];
+	a3 = stra[stra.length() / 2];
+	a4 = stra[stra.length() / 2 + 1];
+	return a1 + a2 + a3 + a4;
 }
 
-int metod_square(string key) {
+string metod_square(string key) {
 	if (!isInt(key)) {
+		setlocale(LC_ALL, "Rus");
 		cout << "Не целое число!";
 	}
 	else {
