@@ -1,3 +1,3 @@
 #include <string>
-string a;
-int HashRot13(a.c_str());
+using namespace std;
+unsigned int HashRot13(string a);

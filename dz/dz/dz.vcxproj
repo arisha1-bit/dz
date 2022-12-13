@@ -140,6 +140,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="dz.cpp" />
+    <ClCompile Include="muzafarova_AC_21_05.cpp" />
+    <ClCompile Include="rot13.cpp" />
+    <ClCompile Include="Shl_dz.cpp" />
+    <ClCompile Include="Zhuchkov_AC_21_05.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Header.h" />
+    <ClInclude Include="muzafarova_AC_21_05.h" />
+    <ClInclude Include="Shl_dz.h" />
+    <ClInclude Include="Zhuchkov_AC_21_05.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
