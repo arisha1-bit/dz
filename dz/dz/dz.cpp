@@ -4,6 +4,7 @@
 #include "chrono"
 #include "Shl_dz.h"
 #include "Zhuchkov_AC_21_05.h"
+#include "Header.h"
 using namespace std;
 using namespace chrono;
 template <typename T>
@@ -15,11 +16,12 @@ void run(T name, string number) {
 }
 int main() {
 	ifstream fin;
-	fin.open("Hash_number");
+	fin.open("num.txt");
 	string number;
 	fin >> number;
-	run(metod_square, "12345");
-	run(MultiplMethod, "12345");
-	run(PolinomHash, "1234767677687755456787985");
+	run(metod_square, number);
+	run(MultiplMethod, number);
+	run(PolinomHash, number);
+	run(HashRot13, number);
 	return 0;
 }

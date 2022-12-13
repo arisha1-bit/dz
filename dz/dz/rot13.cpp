@@ -1,8 +1,10 @@
 #include <iostream>
 #include <string>
-unsigned int HashRot13(const char* str)
+#include "Header.h"
+using namespace std;
+unsigned int HashRot13(string a)
 {
-
+    const char* str = a.c_str();
     unsigned int hash = 0;
 
     for (; *str; str++)
