@@ -17,7 +17,7 @@ void run(hash_func f, string number, string name) {
 }
 int main() {
 	ifstream fin;
-	fin.open("Hash_number");
+	fin.open("num.txt");
 	string number;
 	fin >> number;
 	run(metod_square, number, "midsquare technique");

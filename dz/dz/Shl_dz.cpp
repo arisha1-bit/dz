@@ -27,7 +27,6 @@ int HashFunction(string data)
 
 int MultiplMethod(string key)
 {
-	setlocale(LC_ALL, "Rus");
 	if (CheckInput(key)) {
 		return HashFunction(key);
 	}
@@ -36,7 +35,3 @@ int MultiplMethod(string key)
 	}
 		
 }
-
-//int main() {
-//	return 0;
-//}
