@@ -8,7 +8,6 @@
 using namespace std;
 using namespace chrono;
 using hash_func = string (*) (string p);
-template <typename T>
 void run(hash_func f, string number, string name) {
 	auto start = steady_clock::now();
 	f(number);
@@ -23,6 +22,6 @@ int main() {
 	run(metod_square, number, "midsquare technique");
 	run(MultiplMethod, number,"multiplication method");
 	run(PolinomHash, number,"polynomial hashing");
-	run(rot, number, "ROT 13");
+	run(HashRot13, number, "ROT 13");
 	return 0;
 }
