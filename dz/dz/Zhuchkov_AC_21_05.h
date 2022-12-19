@@ -4,5 +4,5 @@ using namespace std;
 
 bool isInt(char str);
 
-long long PolinomHash(string str);
+string PolinomHash(string str);
 

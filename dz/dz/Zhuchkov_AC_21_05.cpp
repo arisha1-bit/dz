@@ -25,7 +25,7 @@ bool isInt(char str) {
     return 0;
 }
 
-long long PolinomHash(string str) {
+string PolinomHash(string str) {
     
 //  P: значением P может быть любое простое число, примерно равное количеству различных используемых символов.
 //  Например : если входная строка содержит только строчные буквы английского алфавита, то P = 31 является подходящим значением P.
@@ -55,5 +55,5 @@ long long PolinomHash(string str) {
         m = (m * k) % mod;
     }
 
-    return hash;
+    return to_string(hash);
 }
