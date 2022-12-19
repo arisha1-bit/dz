@@ -17,18 +17,18 @@ bool CheckInput(string input) {
 	return 1;
 }
 
-int HashFunction(string data)
+unsigned int HashFunction(string data)
 {
-	int k = std::stoi(data);
+	unsigned int k = std::stoi(data);
 	int N = 13; double A = 0.618033;
-	int h = N * fmod(k * A, 1);
+	unsigned int h = N * fmod(k * A, 1);
 	return h;
 }
 
-int MultiplMethod(string key)
+string MultiplMethod(string key)
 {
 	if (CheckInput(key)) {
-		return HashFunction(key);
+		return to_string(HashFunction(key));
 	}
 	else {
 		cout << "Error!";

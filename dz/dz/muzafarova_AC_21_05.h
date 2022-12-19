@@ -4,6 +4,6 @@ using namespace std;
 
 bool isInt(string str);
 
-unsigned int HF(int key);
+string HF(string key);
 
-int metod_square(string key);
+string metod_square(string key);

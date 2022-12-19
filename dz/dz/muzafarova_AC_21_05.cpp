@@ -20,10 +20,14 @@ bool isInt(string str) {
 }
 
 string HF(string key) {
-	long int a = std::stoi(key);
+	unsigned int a = std::stoi(key);
 	a *= a;
-	string a1, a2, a3, a4;
+	string a1, a2, a3, a4, a0;
 	string stra = to_string(a);
+	a0 = "0000";
+	if (stra.length() < 4) {
+		stra = a0 + stra;
+	}
 	a1 = stra[stra.length() / 2 - 2];
 	a2 = stra[stra.length() / 2 - 1];
 	a3 = stra[stra.length() / 2];

@@ -2,8 +2,8 @@
 #include <iostream>
 using namespace std;
 
-bool CheckNumber(string input);
+bool CheckInput(string input);
 
-int HashFunction(string data);
+unsigned int HashFunction(string data);
 
-int MultiplMethod(string key);
+string MultiplMethod(string key);
