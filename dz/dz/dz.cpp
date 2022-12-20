@@ -14,6 +14,8 @@ void run(hash_func f, string number, string name) {
 	auto end = steady_clock::now();
 	cout << name << ": elapsed time: " << duration_cast<microseconds>(end-start).count() << "mcs\n";
 }
+
+
 int main() {
 	ifstream fin;
 	fin.open("num.txt");
@@ -23,5 +25,21 @@ int main() {
 	run(MultiplMethod, number,"multiplication method");
 	run(PolinomHash, number,"polynomial hashing");
 	run(HashRot13, number, "ROT 13");
+
+	/*string base_hash = MultiplMethod("99823686");
+	int count = 0;
+	string new_hash;
+
+	do {
+		new_hash = MultiplMethod(to_string(rand()));
+		if (base_hash != new_hash) { 
+			count += 1;
+		}
+
+		cout << count << ' ' << new_hash << ' ' << base_hash << endl;
+	} while (base_hash != new_hash);
+
+	cout << count << endl;*/
+
 	return 0;
 }

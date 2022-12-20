@@ -20,7 +20,7 @@ bool CheckInput(string input) {
 unsigned int HashFunction(string data)
 {
 	unsigned int k = std::stoi(data);
-	int N = 13; double A = 0.618033;
+	int N = 16384; double A = 0.618033;
 	unsigned int h = N * fmod(k * A, 1);
 	return h;
 }

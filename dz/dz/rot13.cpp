@@ -2,7 +2,7 @@
 #include <string>
 #include "Header.h"
 using namespace std;
-unsigned int HashRot13(string a)
+string HashRot13(string a)
 {
     const char* str = a.c_str();
     unsigned int hash = 0;
@@ -13,6 +13,6 @@ unsigned int HashRot13(string a)
         hash -= (hash << 13) | (hash >> 19);
     }
 
-    return hash;
+    return to_string(hash);
 
 }
